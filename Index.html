@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Page</title>
+
+</head>
+
+<script>
+        inc=()=>{
+            var l=document.getElementById("val").innerText;
+            l=Number(l);
+            l++;
+            document.getElementById("val").innerText = l;
+        }
+        dec=()=>{
+            var l=document.getElementById("val").innerText;
+            l=Number(l);
+            l--;
+            if(l>=0){
+                document.getElementById("val").innerText = l;
+            }
+           else{
+            document.getElementById("val").innerText = "0";
+           }
+        }
+        function carting() {
+            var a = document.querySelector('#val').innerText;
+            document.querySelector('.cart_cnt').innerText = a;
+            document.querySelector('.cart_cnt1').innerText = a;
+            var total = a * 125;
+            document.querySelector(".Cost").innerText = total;
+            console.log(total);
+        }
+        const cart = () => {
+            var a = document.querySelector('#val').innerText;
+            var p=document.querySelector('.pop-up');
+            console.log(p);
+            if (a == 0) {
+                window.alert("cart is empty!");
+            }
+            else {
+                carting();
+                p.classList.toggle("show");
+
+            }
+        }
+
+        
+
+
+</script>
+
+<body>
+    <div class="Main">
+        <div class="Top_nav">
+            <div class="left">
+                <div class="logo">
+                    <h2>sneakers</h2>
+                </div>
+                <div class="nav">
+                    <div class="nav_list">
+                        <ul>
+                            <li><a href="#" class="nav-link">Collections</a></li>
+                            <li><a href="#" class="nav-link">Men</a></li>
+                            <li><a href="#" class="nav-link">Women</a></li>
+                            <li><a href="#" class="nav-link">About</a></li>
+                            <li><a href="#" class="nav-link">Contact </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="pop-up" class="pop-up">
+                    <div class="cart1">
+                        <span>Cart</span>
+                    </div>
+                    <hr>
+                    <div class="cont">
+                        <div class="cont1">
+                            <span><img src="image1.jpg"></span>
+                        </div>
+                        <div class="cont2">
+                            <div class="about_cart">
+                                <span>Autumn Limited Edition Sneakers</span>
+                            </div>
+                            <div class="Total_cost">
+                                <span>$ 125.00 X </span><span class="cart_cnt1"></span><span> $ </span><span
+                                    class="Cost"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span><img class="cart" src="cart.png"></span>
+                <span class="cart_cnt"></span>
+                <span><img class="avatar" src="avatar.png"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="body_section">
+            <div class="gallery">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="product-imgs">
+                            <div class="img-display">
+                                <div class="img-showcase">
+                                    <img id="slide1" class="Product" src="image1.jpg">
+                                    <img id="slide2" class="Product" src="image2.jpg">
+                                    <img id="slide3" class="Product" src="image3.jpg">
+                                    <img id="slide4" class="Product" src="image4.jpg">
+                                </div>
+                            </div>
+                            <div class="img-select">
+                                <div class="img-item">
+                                    <a href="#slide1" data-id="1"><img src="image1.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="img-item">
+                                    <a href="#slide2" data-id="1"><img src="image2.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="img-item">
+                                    <a href="#slide3" data-id="1"><img src="image3.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="img-item">
+                                    <a href="#slide4" data-id="1"><img src="image4.jpg" alt="product-image"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+
+                <div>
+                    <p class="sneaker"> SNEAKER COMPANY</p>
+                    <h2 class="con">Fall Limited Edition Sneakers</h2>
+                    <p class="para">These low-profile sneakers are your perfect casual wear compansion.
+                        Featuring a durable rubber outer sole, they'll withstand everything the weater can offer.
+                    </p>
+                    <div class="amount">
+                        <span class="price"> $125.00</span>
+                        <span class="discount">50%</span><br>
+                        <span class="discounted_amount">$250.00</span>
+                    </div>
+
+                    <div class="btnarea">
+                        <div class="buttons">
+                            <button class="btncart1" onclick="dec()">-</button>
+
+                            <p id="val">0</p>
+
+                            <button class="btncart1" onclick="inc()">+</button>
+                        </div>
+                        <div>
+                            <a href="#"><span><button class="btncart" onclick="cart()"><img class="cart" src="cart2.png"> <span>Add to
+                                            cart</span></button></span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
