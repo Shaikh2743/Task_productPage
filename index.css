@@ -1,4 +1,8 @@
-
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
 
 
@@ -306,7 +310,7 @@ a:active{
 body {margin:0;font-family:Arial}
 
 .topnav {
-    margin-top: 0.5rem;
+    margin-top: -0.5rem;
   overflow: hidden;
   background-color:white;
 }
