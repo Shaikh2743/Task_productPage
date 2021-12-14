@@ -12,46 +12,54 @@
 </head>
 
 <script>
-        inc=()=>{
-            var l=document.getElementById("val").innerText;
-            l=Number(l);
-            l++;
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "nav_list") {
+            x.className += " responsive";
+        } else {
+            x.className = "nav_list";
+        }
+    }
+    inc = () => {
+        var l = document.getElementById("val").innerText;
+        l = Number(l);
+        l++;
+        document.getElementById("val").innerText = l;
+    }
+    dec = () => {
+        var l = document.getElementById("val").innerText;
+        l = Number(l);
+        l--;
+        if (l >= 0) {
             document.getElementById("val").innerText = l;
         }
-        dec=()=>{
-            var l=document.getElementById("val").innerText;
-            l=Number(l);
-            l--;
-            if(l>=0){
-                document.getElementById("val").innerText = l;
-            }
-           else{
+        else {
             document.getElementById("val").innerText = "0";
-           }
         }
-        function carting() {
-            var a = document.querySelector('#val').innerText;
-            document.querySelector('.cart_cnt').innerText = a;
-            document.querySelector('.cart_cnt1').innerText = a;
-            var total = a * 125;
-            document.querySelector(".Cost").innerText = total;
-            console.log(total);
+    }
+    function carting() {
+        var a = document.querySelector('#val').innerText;
+        document.querySelector('.cart_cnt').innerText = a;
+        document.querySelector('.cart_cnt1').innerText = a;
+        var total = a * 125;
+        document.querySelector(".Cost").innerText = total;
+        console.log(total);
+    }
+    const cart = () => {
+        var a = document.querySelector('#val').innerText;
+        var p = document.querySelector('.pop-up');
+        console.log(p);
+        if (a == 0) {
+            window.alert("cart is empty!");
         }
-        const cart = () => {
-            var a = document.querySelector('#val').innerText;
-            var p=document.querySelector('.pop-up');
-            console.log(p);
-            if (a == 0) {
-                window.alert("cart is empty!");
-            }
-            else {
-                carting();
-                p.classList.toggle("show");
+        else {
+            carting();
+            p.classList.toggle("show");
 
-            }
         }
+    }
 
-        
+
 
 
 </script>
@@ -64,13 +72,13 @@
                     <h2>sneakers</h2>
                 </div>
                 <div class="nav">
-                    <div class="nav_list">
+                    <div class="nav_list" id="myTopnav">
                         <ul>
-                            <li><a href="#" class="nav-link">Collections</a></li>
-                            <li><a href="#" class="nav-link">Men</a></li>
-                            <li><a href="#" class="nav-link">Women</a></li>
-                            <li><a href="#" class="nav-link">About</a></li>
-                            <li><a href="#" class="nav-link">Contact </a></li>
+                            <li><a href="#collectiona" class="nav-link">Collections</a></li>
+                            <li><a href="#Men" class="nav-link">Men</a></li>
+                            <li><a href="#women" class="nav-link">Women</a></li>
+                            <li><a href="#About" class="nav-link">About</a></li>
+                            <li><a href="#Contact" class="nav-link">Contact </a></li>
                         </ul>
                     </div>
                 </div>
@@ -156,7 +164,8 @@
                             <button class="btncart1" onclick="inc()">+</button>
                         </div>
                         <div>
-                            <a href="#"><span><button class="btncart" onclick="cart()"><img class="cart" src="cart2.png"> <span>Add to
+                            <a href="#"><span><button class="btncart" onclick="cart()"><img class="cart"
+                                            src="cart2.png"> <span>Add to
                                             cart</span></button></span></a>
 
                         </div>
