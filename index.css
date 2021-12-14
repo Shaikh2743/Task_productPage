@@ -59,8 +59,8 @@ li {
 .nav-link:hover{
     color: black;
     text-decoration: none;
-    padding-bottom: 33px;
-    border-bottom: 4px solid #d86e32;
+    padding-bottom: 31px;
+    border-bottom: 3px solid #d86e32;
 }
 
 .left {
@@ -71,7 +71,6 @@ li {
 .right {
     display: flex;
     width: 30%;
-    margin-top: 3%;
     justify-content: right;
 }
 
