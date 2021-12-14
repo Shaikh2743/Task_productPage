@@ -14,10 +14,10 @@
 <script>
     function myFunction() {
         var x = document.getElementById("myTopnav");
-        if (x.className === "nav_list") {
+        if (x.className === "topnav") {
             x.className += " responsive";
         } else {
-            x.className = "nav_list";
+            x.className = "topnav";
         }
     }
     inc = () => {
@@ -72,15 +72,14 @@
                     <h2>sneakers</h2>
                 </div>
                 <div class="nav">
-                    <div class="nav_list" id="myTopnav">
-                        <ul>
-                            <li><a href="#collectiona" class="nav-link">Collections</a></li>
-                            <li><a href="#Men" class="nav-link">Men</a></li>
-                            <li><a href="#women" class="nav-link">Women</a></li>
-                            <li><a href="#About" class="nav-link">About</a></li>
-                            <li><a href="#Contact" class="nav-link">Contact </a></li>
-                        </ul>
-                    </div>
+                    <div class="topnav nav_list" id="myTopnav">
+                        <a href="#Collections"  class="nav-link">Collections</a>
+                        <a href="#Men" class="nav-link">Men</a>
+                        <a href="#Women" class="nav-link">Women</a> 
+                        <a href="#Contact" class="nav-link">Contact</a>
+                        <a href="#About" class="nav-link">About</a>
+                        <a href="javascript:void(0);" style="font-size:24px;" class="icon" onclick="myFunction()">&#9776;</a>
+                      </div>
                 </div>
             </div>
             <div class="right">

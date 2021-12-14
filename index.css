@@ -306,6 +306,7 @@ a:active{
 body {margin:0;font-family:Arial}
 
 .topnav {
+    margin-top: 0.5rem;
   overflow: hidden;
   background-color:white;
 }
@@ -433,6 +434,9 @@ body {margin:0;font-family:Arial}
     text-decoration: none;
     font-size: 17px;
 }
+.logo{
+    margin-left: 3rem;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -512,5 +516,8 @@ body {margin:0;font-family:Arial}
         margin: 0;
         padding-bottom: 1rem;
     }
+    .logo {
+        margin-left: 2rem;
+    }   
     
 }
