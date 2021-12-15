@@ -232,6 +232,7 @@ a {
 }
 .btnarea {
 	display: flex;
+	flex-direction: column;
 }
 .btncart {
 	width: 14rem;

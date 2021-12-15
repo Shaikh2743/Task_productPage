@@ -167,7 +167,11 @@ a:active{
 
 .buttons {
     display: flex;
+    width: 100%;
+    text-align: center;
+    height: 3rem;
     margin-top: 1rem;
+    justify-content: center;
     background-color: #cdcbcb30;
 }
 
@@ -225,6 +229,7 @@ a:active{
 
 .btnarea {
     display: flex;
+    flex-direction: column;
 }
 
 .btncart {
@@ -376,6 +381,24 @@ body {margin:0;font-family:Arial}
 }
 
 @media screen and (max-width: 767px) {
+    .gallery {
+        display: flex;
+        width: 100%;
+        padding: 0 0%;
+        overflow: hidden;
+    }
+    .content {
+        display: flex;
+        width: 100%;
+        padding: 0 3%;
+        margin-top: 2rem;
+    }
+    .con {
+        font-size: 2rem;
+        margin: 0;
+    }
+    
+    
 
     
     .btncart {
@@ -399,7 +422,7 @@ body {margin:0;font-family:Arial}
     .body_section {
         display: flex;
         width: 100%;
-        margin-top: 5rem;
+        margin-top: 1rem;
         flex-direction: column;
     }
     .para {
