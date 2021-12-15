@@ -414,8 +414,9 @@ body {margin:0;font-family:Arial}
   .topnav a.icon {
     float: left;
     display: block;
-    font-size: 3rem ;
-  }
+    margin-top: -35%;
+    margin-left: 15%;
+}
   .topnav {
     overflow: hidden;
     float: left;
