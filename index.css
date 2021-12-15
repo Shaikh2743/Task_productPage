@@ -230,7 +230,7 @@ a:active{
 
 .btnarea {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .btncart {
@@ -403,9 +403,6 @@ body {margin:0;font-family:Arial}
         margin: 0;
     }
     
-    
-
-    
     .btncart {
         display: flex;
         width: 100%;
@@ -420,6 +417,10 @@ body {margin:0;font-family:Arial}
         background-color: #ff7d1a;
         color: white;
         border-radius: 0.5rem;
+    }
+    .btnarea {
+        display: flex;
+        flex-direction: row;
     }
 
     .Main {
@@ -473,6 +474,7 @@ body {margin:0;font-family:Arial}
 
 @media screen and (max-width: 767px) {
 
+    
 
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -526,21 +528,43 @@ body {margin:0;font-family:Arial}
     line-height: 2.5;
     padding-left: 3%;
 }
+.btnarea {
+    display: flex;
+    flex-direction: column;
+}
+.btncart {
+    width: 100%;
+    height: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    background-color: #ff7d1a;
+    color: white;
+    border-radius: 0.5rem;
+}
 
 
 }
 @media (min-width:30px) and (max-width:356px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0%;
+        margin-top: 2rem;
+    }
+
     .btnarea {
         display: flex;
         flex-direction: column;
     }
     .btncart {
-        width: 12rem;
+        width: 100%;
         height: 4rem;
         margin-top: 1rem;
         margin-bottom: 2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
         text-align: center;
         background: transparent;
         border: none;
@@ -548,10 +572,8 @@ body {margin:0;font-family:Arial}
         color: white;
         border-radius: 0.5rem;
     }
-    .btnarea {
-        display: flex;
-        flex-direction: column;
-    }
+
+    
     .buttons {
         display: flex;
         margin-top: 1rem;
@@ -579,6 +601,7 @@ body {margin:0;font-family:Arial}
     }
     .logo {
         margin-left: 2rem;
-    }   
+    }  
+} 
     
-}
+
